@@ -11,10 +11,7 @@ module.exports = function (grunt) {
         src: [
           '**/*.js',
           '**/*.json',
-        ],
-        exclude: [
-//          'test/**/*',
-          'node_modules/**/*'
+          '!node_modules/**/*'
         ],
         options: {
           errorsOnly: true,
@@ -54,9 +51,7 @@ module.exports = function (grunt) {
 
     watch: {
       scripts: {
-        files: [
-          '<%= jslint.all.src %>'
-        ],
+        files: '<%= jslint.all.src %>',
         tasks: ['test'],
         options: {
           interrupt: true
