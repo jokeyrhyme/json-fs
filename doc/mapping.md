@@ -89,26 +89,20 @@ The extension for the Directory is "object".
 }
 ```
 
-- unlabeled.object
+- unlabeled.object / abc.null.txt
 
-  - abc.null.txt
+- unlabeled.object / def.boolean.txt
 
-  - def.boolean.txt
+- unlabeled.object / ghi.number.txt
 
-  - ghi.number.txt
+- unlabeled.object / jkl.string.txt
 
-  - jkl.string.txt
+- unlabeled.object / pqr.array / 0.null.txt
 
-  - pqr.array
+- unlabeled.object / pqr.array / 1.boolean.txt
 
-    - 0.null.txt
+- unlabeled.object / pqr.array / 2.number.txt
 
-    - 1.boolean.txt
+- unlabeled.object / pqr.array / 3.string.txt
 
-    - 2.number.txt
-
-    - 3.string.txt
-
-    - 4.object
-
-      - vwx.null.txt
+- unlabeled.object / pqr.array / 4.object / vwx.null.txt
