@@ -15,7 +15,12 @@ json_fs.awesome(); // "awesome"
 ```
 
 ## Documentation
-_(Coming soon)_
+
+- specification for [data type mapping](doc/mapping.md)
+
+Whilst a JSON document containing only a Null, Boolean, Number or String may be
+considered valid for other purposes, JSON-FS is only intended for use with
+valid JSON documents that specify an Array or Object.
 
 ## Examples
 _(Coming soon)_
