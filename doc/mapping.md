@@ -74,7 +74,7 @@ The extension for the Directory is "object".
 ```json
 {
   "abc": null,
-  "def": true
+  "def": true,
   "ghi": 123,
   "jkl": "mno",
   "pqr": [
