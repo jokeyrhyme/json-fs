@@ -4,8 +4,6 @@
 
 convert JSON to files and directories and back
 
-Note: FSBuilder is complete, but JSONBuilder is a work-in-progress.
-
 ## Getting Started
 _(Note: npm module has not yet been submitted)_
 
