@@ -1,7 +1,7 @@
 {
   "name": "json-fs",
   "description": "convert JSON to files and directories and back",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/jokeyrhyme/json-fs",
   "author": {
     "name": "Ron Waldon",
