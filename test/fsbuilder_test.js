@@ -6,7 +6,7 @@
 // Node.JS standard modules
 
 var fs, path;
-fs = require('fs');
+fs = require('graceful-fs');
 path = require('path');
 
 // 3rd-party modules

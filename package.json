@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "glob": "~3.2",
+    "graceful-fs": "~2.0",
     "q": "~0.9"
   },
   "devDependencies": {
