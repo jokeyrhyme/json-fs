@@ -5,11 +5,31 @@
 convert JSON to files and directories and back
 
 ## Getting Started
-_(Note: npm module has not yet been submitted)_
 
 Install the module with: `npm install json-fs`
 
 Refer to it in Node.JS with: `require('json-fs')`
+
+## Command-Line Interface
+
+This module provides basic CLI tools. The easiest way to access them is to
+install the module globally (with permission):
+
+    npm install -g json-fs
+
+You'll be able to run `json2fs` and `fs2json` for convenient access to the
+functionality provided by the library. You can run them with `-h` or `--help`
+to see basic instructions.
+
+`json2fs` reads a JSON stream from stdin and modifies the current working
+directory accordingly. **Make sure to `cd` to your target directory first!**
+
+    json2fs < path/to/file.json
+
+`fs2json` writes a JSON stream to stdout, based on the current working
+directory. This doesn't modify the file-system, so it's safe to run anywhere.
+
+    fs2json > path/to/file.json
 
 ## Documentation
 
