@@ -9,16 +9,53 @@ _(Note: npm module has not yet been submitted)_
 
 Install the module with: `npm install json-fs`
 
-```javascript
-var json_fs = require('json-fs');
-json_fs.awesome(); // "awesome"
-```
+Refer to it in Node.JS with: `require('json-fs')`
 
 ## Documentation
-_(Coming soon)_
+
+- specification for [data type mapping](doc/mapping.md)
+
+Whilst a JSON document containing only a Null, Boolean, Number or String may be
+considered valid for other purposes, JSON-FS is only intended for use with
+valid JSON documents that specify an Array or Object.
+
+### Generating API Documentation
+
+You may build the documentation using [JSDoc3](http://usejsdoc.org) with the
+following grunt task (note this requires Java and JAVA_HOME to be set):
+
+    grunt doc
+
+The HTML documentation will be built in the `doc/jsdoc` directory.
 
 ## Examples
-_(Coming soon)_
+
+### FSBuilder
+
+```javascript
+var fsBuilder = new require('json-fs').FSBuilder();
+fsBuilder.setSource({ object: 'or array', [ 'to', 'store', 'as', 'files' ] });
+fsBuilder.setOutput('/path/to/output/directory')
+fsBuilder.build(function (err) {
+  if (err) {
+    throw err;
+  }
+  // otherwise, the contents of the directory have been built!
+});
+```
+
+### JSONBuilder
+
+```javascript
+var jsonBuilder = new require('json-fs').JSONBuilder();
+jsonBuilder.setSource('/path/to/input/directory')
+jsonBuilder.build(function (err, result) {
+  if (err) {
+    throw err;
+  }
+  // otherwise, result will be an Object or Array as per the directory
+});
+```
 
 ## Contributing
 Formal style-guide for this project is JSLint. See JSLint settings at the top of

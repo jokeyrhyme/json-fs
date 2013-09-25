@@ -1,7 +1,7 @@
 {
   "name": "json-fs",
   "description": "convert JSON to files and directories and back",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/jokeyrhyme/json-fs",
   "author": {
     "name": "Ron Waldon",
@@ -33,18 +33,21 @@
   },
   "dependencies": {
     "glob": "~3.2",
+    "graceful-fs": "~2.0",
     "q": "~0.9"
   },
   "devDependencies": {
     "chai": "~1.7",
     "grunt": "~0.4",
     "grunt-contrib-watch": "~0.5",
+    "grunt-jsdoc": "~0.4",
     "grunt-jslint": "~1.0",
     "grunt-mocha-cli": "~1.0",
     "grunt-mocha-cov": "~0.0.7",
     "mocha": "~1.12",
     "sinon": "~1.7",
-    "sinon-chai": "~2.4"
+    "sinon-chai": "~2.4",
+    "temp": "~0.6"
   },
   "peerDependencies": {},
   "keywords": []

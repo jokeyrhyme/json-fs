@@ -6,15 +6,23 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    jsdoc: {
+      src: [
+        'lib/*.js'
+      ],
+      options: {
+        destination: 'doc/jsdoc',
+        configure: 'jsdoc.json'
+      }
+    },
+
     jslint: {
       all: {
         src: [
           '**/*.js',
           '**/*.json',
-        ],
-        exclude: [
-//          'test/**/*',
-          'node_modules/**/*'
+          '!node_modules/**/*',
+          '!doc/jsdoc/**/*'
         ],
         options: {
           errorsOnly: true,
@@ -53,6 +61,15 @@ module.exports = function (grunt) {
     },
 
     watch: {
+      docs: {
+        files: [
+          '<%= jsdoc.src %>',
+        ],
+        tasks: ['doc'],
+        options: {
+          interrupt: true
+        }
+      },
       scripts: {
         files: [
           '<%= jslint.all.src %>'
@@ -66,10 +83,12 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-mocha-cli');
   grunt.loadNpmTasks('grunt-mocha-cov');
 
+  grunt.registerTask('doc', 'jsdoc');
   grunt.registerTask('travis', ['jslint', 'mochacli', 'mochacov:coveralls']);
   grunt.registerTask('test', ['jslint', 'mochacli', 'mochacov:html']);
 

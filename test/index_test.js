@@ -30,3 +30,18 @@ suite('main module', function () {
   });
 
 });
+
+suite('main object', function () {
+  var jsonFs = require(path.join('..', 'lib'));
+
+  test('exposes FSBuilder constructor', function () {
+    var FSBuilder = require(path.join('..', 'lib', 'fsbuilder'));
+    assert.equal(jsonFs.FSBuilder, FSBuilder, 'FSBuilder available');
+  });
+
+  test('exposes JSONBuilder constructor', function () {
+    var JSONBuilder = require(path.join('..', 'lib', 'jsonbuilder'));
+    assert.equal(jsonFs.JSONBuilder, JSONBuilder, 'JSONBuilder available');
+  });
+
+});
