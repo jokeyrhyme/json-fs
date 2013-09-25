@@ -21,6 +21,10 @@
       "url": "https://github.com/jokeyrhyme/json-fs/blob/master/LICENSE-MIT"
     }
   ],
+  "bin": {
+    "fs2json": "./bin/fs2json",
+    "json2fs": "./bin/json2fs"
+  },
   "main": "lib/index",
   "engines": {
     "node": ">=0.9.0 <0.11.0"
