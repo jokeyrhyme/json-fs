@@ -50,10 +50,15 @@ The HTML documentation will be built in the `doc/jsdoc` directory.
 
 ## Examples
 
+```shell
+npm install json-fs
+```
+
 ### FSBuilder
 
 ```javascript
-var fsBuilder = new require('json-fs').FSBuilder();
+var jsonfs = require('json-fs');
+var fsBuilder = new jsonfs.FSBuilder();
 fsBuilder.setSource({ object: 'or array', [ 'to', 'store', 'as', 'files' ] });
 fsBuilder.setOutput('/path/to/output/directory')
 fsBuilder.build(function (err) {
@@ -67,7 +72,8 @@ fsBuilder.build(function (err) {
 ### JSONBuilder
 
 ```javascript
-var jsonBuilder = new require('json-fs').JSONBuilder();
+var jsonfs = require('json-fs');
+var jsonBuilder = new jsonfs.JSONBuilder();
 jsonBuilder.setSource('/path/to/input/directory')
 jsonBuilder.build(function (err, result) {
   if (err) {
