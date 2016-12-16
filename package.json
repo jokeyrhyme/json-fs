@@ -36,22 +36,22 @@
     }
   },
   "dependencies": {
-    "glob": "~3.2",
-    "graceful-fs": "~2.0",
-    "q": "~0.9"
+    "glob": "~7.1.1",
+    "graceful-fs": "~4.1.11",
+    "q": "~1.4.1"
   },
   "devDependencies": {
-    "chai": "~1.7",
-    "grunt": "~0.4",
-    "grunt-contrib-watch": "~0.5",
-    "grunt-jsdoc": "~0.4",
-    "grunt-jslint": "~1.0",
-    "grunt-mocha-cli": "~1.0",
-    "grunt-mocha-cov": "~0.0.7",
-    "mocha": "~1.12",
-    "sinon": "~1.7",
-    "sinon-chai": "~2.4",
-    "temp": "~0.6"
+    "chai": "~3.5.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-jsdoc": "~2.1.0",
+    "grunt-jslint": "~1.1.14",
+    "grunt-mocha-cli": "~3.0.0",
+    "grunt-mocha-cov": "~0.4.0",
+    "mocha": "~3.2.0",
+    "sinon": "~1.17.6",
+    "sinon-chai": "~2.8.0",
+    "temp": "~0.8.3"
   },
   "peerDependencies": {},
   "keywords": []
