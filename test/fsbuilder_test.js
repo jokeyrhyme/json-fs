@@ -1,6 +1,3 @@
-/*jslint es5:true, indent:2, maxlen:80, node:true*/
-/*global suite, test, suiteSetup, suiteTeardown, setup, teardown*/ // Mocha
-/*jslint nomen:true*/ // Node.JS global __dirname
 'use strict';
 
 // Node.JS standard modules
@@ -11,12 +8,11 @@ path = require('path');
 
 // 3rd-party modules
 
-var chai, assert, sinon, temp;
+var chai, assert, temp;
 
 chai = require('chai');
 chai.use(require('sinon-chai'));
 assert = require('chai').assert;
-sinon = require('sinon');
 
 temp = require('temp');
 
@@ -29,12 +25,10 @@ temp = require('temp');
 temp.track();
 
 suite('FSBuilder module', function () {
-
   test('requires without issue', function () {
     var FSBuilder = require(path.join('..', 'lib', 'fsbuilder'));
     assert.isFunction(FSBuilder, 'got Function');
   });
-
 });
 
 suite('FSBuilder object', function () {
@@ -70,7 +64,6 @@ suite('FSBuilder object', function () {
 
 //  test('', function () {
 //  });
-
 });
 
 suite('fsBuilder.setSource()', function () {
@@ -128,7 +121,6 @@ suite('fsBuilder.setSource()', function () {
       fsBuilder.setSource({});
     });
   });
-
 });
 
 suite('fsBuilder.setOutput()', function () {
@@ -150,7 +142,6 @@ suite('fsBuilder.setOutput()', function () {
       fsBuilder.setOutput('abc');
     });
   });
-
 });
 
 suite('fsBuilder.build()', function () {
@@ -170,7 +161,6 @@ suite('fsBuilder.build()', function () {
       done();
     });
   });
-
 
   suite('to temporary output path', function () {
     var tempDir;
@@ -377,9 +367,5 @@ suite('fsBuilder.build()', function () {
         });
       });
     });
-
-
   });
-
 });
-

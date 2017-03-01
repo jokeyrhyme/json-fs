@@ -1,7 +1,3 @@
-/*jslint es5:true, indent:2, maxlen:80, node:true*/
-/*global suite, test, suiteSetup, suiteTeardown, setup, teardown*/ // Mocha
-/*jslint nomen:true*/ // Node.JS global __dirname
-/*jslint stupid:true*/ // Node.JS ...Sync functions, okay for testing
 'use strict';
 
 // Node.JS standard modules
@@ -12,12 +8,11 @@ path = require('path');
 
 // 3rd-party modules
 
-var chai, assert, sinon, temp;
+var chai, assert, temp;
 
 chai = require('chai');
 chai.use(require('sinon-chai'));
 assert = require('chai').assert;
-sinon = require('sinon');
 
 temp = require('temp');
 
@@ -30,12 +25,10 @@ temp = require('temp');
 temp.track();
 
 suite('JSONBuilder module', function () {
-
   test('requires without issue', function () {
     var JSONBuilder = require(path.join('..', 'lib', 'jsonbuilder'));
     assert.isFunction(JSONBuilder, 'got Function');
   });
-
 });
 
 suite('JSONBuilder object', function () {
@@ -59,7 +52,6 @@ suite('JSONBuilder object', function () {
       jsonbuilder.build();
     }, Error, 'no source');
   });
-
 });
 
 suite('jsonBuilder.setSource()', function () {
@@ -87,7 +79,6 @@ suite('jsonBuilder.setSource()', function () {
       jsonBuilder.setSource('abc');
     });
   });
-
 });
 
 suite('jsonBuilder.build()', function () {
@@ -210,7 +201,6 @@ suite('jsonBuilder.build()', function () {
         done();
       });
     });
-
   });
 
   suite('from temporary Array path', function () {
@@ -310,8 +300,5 @@ suite('jsonBuilder.build()', function () {
         done();
       });
     });
-
   });
-
 });
-

@@ -1,5 +1,3 @@
-/*jslint es5:true, indent:2, maxlen:80, node:true*/
-/*global suite, test, suiteSetup, suiteTeardown, setup, teardown*/ // Mocha
 'use strict';
 
 // Node.JS standard modules
@@ -9,12 +7,11 @@ path = require('path');
 
 // 3rd-party modules
 
-var chai, assert, sinon;
+var chai, assert;
 
 chai = require('chai');
 chai.use(require('sinon-chai'));
 assert = require('chai').assert;
-sinon = require('sinon');
 
 // custom modules
 
@@ -23,12 +20,10 @@ sinon = require('sinon');
 // this module
 
 suite('main module', function () {
-
   test('requires without issue', function () {
     var jsonFs = require(path.join('..', 'lib'));
     assert.isObject(jsonFs, 'got Object');
   });
-
 });
 
 suite('main object', function () {
@@ -43,5 +38,4 @@ suite('main object', function () {
     var JSONBuilder = require(path.join('..', 'lib', 'jsonbuilder'));
     assert.equal(jsonFs.JSONBuilder, JSONBuilder, 'JSONBuilder available');
   });
-
 });

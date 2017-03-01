@@ -2,57 +2,67 @@
   "name": "json-fs",
   "description": "convert JSON to files and directories and back",
   "version": "1.1.1",
-  "homepage": "https://github.com/jokeyrhyme/json-fs",
-  "author": {
-    "name": "Ron Waldon",
-    "email": "jokeyrhyme@gmail.com",
-    "url": "http://jokeyrhy.me/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jokeyrhyme/json-fs.git"
+  "author": "Ron Waldon <jokeyrhyme@gmail.com> (http://jokeyrhy.me/)",
+  "bin": {
+    "fs2json": "./bin/fs2json",
+    "json2fs": "./bin/json2fs"
   },
   "bugs": {
     "url": "https://github.com/jokeyrhyme/json-fs/issues"
   },
+  "dependencies": {
+    "glob": "^7.1.1",
+    "graceful-fs": "^4.1.11",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.16.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-node": "^4.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "fixpack": "^2.3.1",
+    "flow-bin": "^0.40.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jsdoc": "^2.1.0",
+    "grunt-mocha-cli": "^3.0.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "temp": "^0.8.3"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=0.10",
+    "npm": ">=4"
+  },
+  "homepage": "https://github.com/jokeyrhyme/json-fs",
+  "keywords": [],
+  "license": "ISC",
   "licenses": [
     {
       "type": "MIT",
       "url": "https://github.com/jokeyrhyme/json-fs/blob/master/LICENSE-MIT"
     }
   ],
-  "bin": {
-    "fs2json": "./bin/fs2json",
-    "json2fs": "./bin/json2fs"
-  },
   "main": "lib/index",
-  "engines": {
-    "node": ">=0.9.0 <0.11.0"
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jokeyrhyme/json-fs.git"
   },
   "scripts": {
-    "test": "grunt test",
-    "blanket": {
-      "pattern": "//^((?!node_modules)(?!_test).)*$/"
-    }
-  },
-  "dependencies": {
-    "glob": "~7.1.1",
-    "graceful-fs": "~4.1.11",
-    "q": "~1.4.1"
-  },
-  "devDependencies": {
-    "chai": "~3.5.0",
-    "grunt": "~1.0.1",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-jsdoc": "~2.1.0",
-    "grunt-jslint": "~1.1.14",
-    "grunt-mocha-cli": "~3.0.0",
-    "grunt-mocha-cov": "~0.4.0",
-    "mocha": "~3.2.0",
-    "sinon": "~1.17.6",
-    "sinon-chai": "~2.8.0",
-    "temp": "~0.8.3"
-  },
-  "peerDependencies": {},
-  "keywords": []
+    "eslint": "eslint --fix --cache .",
+    "fixpack": "fixpack",
+    "flow_check": "flow check",
+    "mocha": "mocha",
+    "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
+    "test": "grunt test"
+  }
 }
