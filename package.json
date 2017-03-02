@@ -39,12 +39,12 @@
     "test": "test"
   },
   "engines": {
-    "node": ">=0.10",
-    "npm": ">=4"
+    "node": ">=4",
+    "npm": ">=3"
   },
   "homepage": "https://github.com/jokeyrhyme/json-fs",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
