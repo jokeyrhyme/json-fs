@@ -1,3 +1,5 @@
 /node_modules/
 /doc/jsdoc
 coverage.html
+
+.eslintcache

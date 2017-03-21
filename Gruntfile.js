@@ -1,8 +1,7 @@
-/*jslint es5:true, indent:2, maxlen:80, node:true*/
-'use strict';
+/* jslint es5:true, indent:2, maxlen:80, node:true */
+'use strict'
 
 module.exports = function (grunt) {
-
   // Project configuration.
   grunt.initConfig({
 
@@ -24,31 +23,10 @@ module.exports = function (grunt) {
       all: ['test/*.js']
     },
 
-    mochacov: {
-      html: {
-        options: {
-          reporter: 'html-cov',
-          output: 'coverage.html'
-        }
-      },
-      coveralls: {
-        options: {
-          coveralls: {
-            serviceName: 'travis-ci'
-          }
-        }
-      },
-      options: {
-        require: ['chai'],
-        ui: 'tdd'
-      },
-      all: ['test/*.js']
-    },
-
     watch: {
       docs: {
         files: [
-          '<%= jsdoc.src %>',
+          '<%= jsdoc.src %>'
         ],
         tasks: ['doc'],
         options: {
@@ -65,18 +43,16 @@ module.exports = function (grunt) {
         }
       }
     }
-  });
+  })
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jsdoc');
-  grunt.loadNpmTasks('grunt-mocha-cli');
-  grunt.loadNpmTasks('grunt-mocha-cov');
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-jsdoc')
+  grunt.loadNpmTasks('grunt-mocha-cli')
 
-  grunt.registerTask('doc', 'jsdoc');
-  grunt.registerTask('travis', ['mochacli', 'mochacov:coveralls']);
-  grunt.registerTask('test', ['mochacli', 'mochacov:html']);
+  grunt.registerTask('doc', 'jsdoc')
+  grunt.registerTask('travis', ['mochacli'])
+  grunt.registerTask('test', ['mochacli'])
 
   // Default task.
-  grunt.registerTask('default', ['test']);
-
-};
+  grunt.registerTask('default', ['test'])
+}

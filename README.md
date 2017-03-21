@@ -1,8 +1,7 @@
-# json-fs
-[![Build Status](https://travis-ci.org/jokeyrhyme/json-fs.png?branch=master,develop)](https://travis-ci.org/jokeyrhyme/json-fs)
-[![NPM version](https://badge.fury.io/js/json-fs.png)](http://badge.fury.io/js/json-fs) [![Coverage Status](https://coveralls.io/repos/jokeyrhyme/json-fs/badge.png)](https://coveralls.io/r/jokeyrhyme/json-fs)
+# json-fs [![npm](https://img.shields.io/npm/v/json-fs.svg?maxAge=2592000)](https://www.npmjs.com/package/json-fs) [![Travis CI Status](https://travis-ci.org/jokeyrhyme/json-fs.svg?branch=master)](https://travis-ci.org/jokeyrhyme/json-fs) [![AppVeyor Status](https://img.shields.io/appveyor/ci/jokeyrhyme/json-fs/master.svg)](https://ci.appveyor.com/project/jokeyrhyme/json-fs)
 
 convert JSON to files and directories and back
+
 
 ## Getting Started
 
