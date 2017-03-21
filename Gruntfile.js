@@ -16,21 +16,6 @@ module.exports = function (grunt) {
       }
     },
 
-    jslint: {
-      all: {
-        src: [
-          '**/*.js',
-          '**/*.json',
-          '!node_modules/**/*',
-          '!doc/jsdoc/**/*'
-        ],
-        options: {
-          errorsOnly: true,
-          failOnError: true
-        }
-      }
-    },
-
     mochacli: {
       options: {
         require: ['chai'],
@@ -84,13 +69,12 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jsdoc');
-  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-mocha-cli');
   grunt.loadNpmTasks('grunt-mocha-cov');
 
   grunt.registerTask('doc', 'jsdoc');
-  grunt.registerTask('travis', ['jslint', 'mochacli', 'mochacov:coveralls']);
-  grunt.registerTask('test', ['jslint', 'mochacli', 'mochacov:html']);
+  grunt.registerTask('travis', ['mochacli', 'mochacov:coveralls']);
+  grunt.registerTask('test', ['mochacli', 'mochacov:html']);
 
   // Default task.
   grunt.registerTask('default', ['test']);
