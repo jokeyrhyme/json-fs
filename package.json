@@ -44,7 +44,7 @@
     "chai": "~1.7",
     "grunt": "~0.4",
     "grunt-contrib-watch": "~0.5",
-    "grunt-jsdoc": "~0.4",
+    "grunt-jsdoc": "~2.1.1",
     "grunt-jslint": "~1.0",
     "grunt-mocha-cli": "~1.0",
     "grunt-mocha-cov": "~0.0.7",
