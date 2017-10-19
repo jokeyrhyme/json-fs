@@ -38,7 +38,7 @@
   "dependencies": {
     "glob": "~3.2",
     "graceful-fs": "~2.0",
-    "q": "~0.9"
+    "q": "~1.5.1"
   },
   "devDependencies": {
     "chai": "~1.7",
