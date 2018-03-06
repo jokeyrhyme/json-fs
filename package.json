@@ -50,7 +50,7 @@
     "grunt-mocha-cov": "~0.0.7",
     "mocha": "~1.12",
     "sinon": "~1.7",
-    "sinon-chai": "~2.4",
+    "sinon-chai": "~3.0.0",
     "temp": "~0.6"
   },
   "peerDependencies": {},
