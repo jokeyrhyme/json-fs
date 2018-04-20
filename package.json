@@ -43,7 +43,7 @@
   "devDependencies": {
     "chai": "~1.7",
     "grunt": "~0.4",
-    "grunt-contrib-watch": "~0.5",
+    "grunt-contrib-watch": "~1.0.1",
     "grunt-jsdoc": "~0.4",
     "grunt-jslint": "~1.0",
     "grunt-mocha-cli": "~1.0",
