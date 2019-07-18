@@ -48,7 +48,7 @@
     "grunt-jslint": "~1.0",
     "grunt-mocha-cli": "~1.0",
     "grunt-mocha-cov": "~0.0.7",
-    "mocha": "~1.12",
+    "mocha": "~6.2.0",
     "sinon": "~1.7",
     "sinon-chai": "~2.4",
     "temp": "~0.6"
